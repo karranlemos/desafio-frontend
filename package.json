@@ -1,0 +1,20 @@
+{
+  "name": "desafio-frontend",
+  "version": "1.0.0",
+  "description": "Este documento descreve o desafio que será utilizado para avaliar os candidatos à vagas de frontend na Inforce. Caso você tenha chegado aqui por acaso, sinta-se à vontade em realizar o teste, e logo após, contar um pouco mais sobre você através do formulário de RH do nosso site (http://inforce.com.br/rh).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karranlemos/desafio-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karranlemos/desafio-frontend/issues"
+  },
+  "homepage": "https://github.com/karranlemos/desafio-frontend#readme"
+}

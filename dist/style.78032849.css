@@ -1,0 +1,8 @@
+:root {
+    --bg-color: #f4f4f4;
+}
+body {
+    background-color: var(--bg-color);
+}
+
+/*# sourceMappingURL=/style.78032849.css.map */
