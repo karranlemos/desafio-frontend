@@ -1,6 +1,2 @@
 @import './config/init.css';
 @import './components/init.css';
-
-body {
-    background-color: var(--bg-color);
-}

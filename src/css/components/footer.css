@@ -1,0 +1,10 @@
+footer#main-footer {
+    --footer-height: 100px;
+
+    --footer-bg-color: #e0e0e0;
+
+    min-height: var(--footer-height);
+    height: 100%;
+
+    background-color: var(--footer-bg-color);
+}

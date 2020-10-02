@@ -119,11 +119,15 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"css/config/fonts.css":[function(require,module,exports) {
 
+},{"./..\\..\\fonts\\NotoSans\\NotoSans-Regular.ttf":[["NotoSans-Regular.e781d50c.ttf","fonts/NotoSans/NotoSans-Regular.ttf"],"fonts/NotoSans/NotoSans-Regular.ttf"],"./..\\..\\fonts\\NotoSans\\NotoSans-Italic.ttf":[["NotoSans-Italic.dfaa4b17.ttf","fonts/NotoSans/NotoSans-Italic.ttf"],"fonts/NotoSans/NotoSans-Italic.ttf"],"./..\\..\\fonts\\NotoSans\\NotoSans-Bold.ttf":[["NotoSans-Bold.e74c5b45.ttf","fonts/NotoSans/NotoSans-Bold.ttf"],"fonts/NotoSans/NotoSans-Bold.ttf"],"./..\\..\\fonts\\NotoSans\\NotoSans-BoldItalic.ttf":[["NotoSans-BoldItalic.4e13719f.ttf","fonts/NotoSans/NotoSans-BoldItalic.ttf"],"fonts/NotoSans/NotoSans-BoldItalic.ttf"],"./..\\..\\fonts\\Quicksand\\Quicksand-Medium.ttf":[["Quicksand-Medium.b41c759c.ttf","fonts/Quicksand/Quicksand-Medium.ttf"],"fonts/Quicksand/Quicksand-Medium.ttf"],"./..\\..\\fonts\\Quicksand\\Quicksand-Bold.ttf":[["Quicksand-Bold.b48bd0f5.ttf","fonts/Quicksand/Quicksand-Bold.ttf"],"fonts/Quicksand/Quicksand-Bold.ttf"]}],"css/config/vars.css":[function(require,module,exports) {
+
 },{}],"css/config/init.css":[function(require,module,exports) {
 
-},{"./fonts.css":"css/config/fonts.css","./vars.css":"css/config/fonts.css","./functions.css":"css/config/fonts.css","./normalize.css":"css/config/fonts.css","./normalize-mine.css":"css/config/fonts.css"}],"css/components/init.css":[function(require,module,exports) {
+},{"./fonts.css":"css/config/fonts.css","./vars.css":"css/config/vars.css","./functions.css":"css/config/vars.css","./normalize.css":"css/config/vars.css","./normalize-mine.css":"css/config/vars.css"}],"css/components/header-nav.css":[function(require,module,exports) {
 
-},{"./utils.css":"css/config/fonts.css","./header-nav.css":"css/config/fonts.css"}],"css/style.css":[function(require,module,exports) {
+},{"./..\\..\\images\\icons\\menu-button.svg":[["menu-button.9a97d4c2.svg","images/icons/menu-button.svg"],"images/icons/menu-button.svg"],"./..\\..\\images\\icons\\menu-button-close.svg":[["menu-button-close.22be289c.svg","images/icons/menu-button-close.svg"],"images/icons/menu-button-close.svg"]}],"css/components/init.css":[function(require,module,exports) {
+
+},{"./tags.css":"css/config/vars.css","./utils.css":"css/config/vars.css","./header-nav.css":"css/components/header-nav.css","./footer.css":"css/config/vars.css"}],"css/style.css":[function(require,module,exports) {
 
 },{"./config/init.css":"css/config/init.css","./components/init.css":"css/components/init.css"}],"js/script.js":[function(require,module,exports) {
 "use strict";
@@ -131,11 +135,11 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 var _init = _interopRequireDefault(require("./components/init"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./components/init":"css/config/fonts.css"}],"bundle.js":[function(require,module,exports) {
+},{"./components/init":"css/config/vars.css"}],"bundle.js":[function(require,module,exports) {
 "use strict";
 
 require("./css/style.css");
 
 require("./js/script");
 },{"./css/style.css":"css/style.css","./js/script":"js/script.js"}]},{},["bundle.js"], null)
-//# sourceMappingURL=/bundle.js.map
+//# sourceMappingURL=/bundle/bundle.js.map

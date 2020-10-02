@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index",
     "dev": "nodemon index",
-    "parcel": "parcel src\\bundle.js --out-dir public --no-hmr"
+    "parcel": "parcel src\\bundle.js --out-dir public/bundle --public-url /bundle --no-hmr"
   },
   "repository": {
     "type": "git",

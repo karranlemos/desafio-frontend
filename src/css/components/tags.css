@@ -1,0 +1,6 @@
+body {
+    background-color: var(--bg-color);
+
+    font-family: var(--default-fonts);
+    font-size: 16px;
+}
