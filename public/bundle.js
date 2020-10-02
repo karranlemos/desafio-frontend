@@ -117,13 +117,25 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/components/init.js":[function(require,module,exports) {
+})({"css/config/fonts.css":[function(require,module,exports) {
 
-},{}],"js/script.js":[function(require,module,exports) {
+},{}],"css/config/init.css":[function(require,module,exports) {
+
+},{"./fonts.css":"css/config/fonts.css","./vars.css":"css/config/fonts.css","./functions.css":"css/config/fonts.css","./normalize.css":"css/config/fonts.css","./normalize-mine.css":"css/config/fonts.css"}],"css/components/init.css":[function(require,module,exports) {
+
+},{"./utils.css":"css/config/fonts.css","./header-nav.css":"css/config/fonts.css"}],"css/style.css":[function(require,module,exports) {
+
+},{"./config/init.css":"css/config/init.css","./components/init.css":"css/components/init.css"}],"js/script.js":[function(require,module,exports) {
 "use strict";
 
 var _init = _interopRequireDefault(require("./components/init"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./components/init":"js/components/init.js"}]},{},["js/script.js"], null)
-//# sourceMappingURL=/script.d573be0b.js.map
+},{"./components/init":"css/config/fonts.css"}],"bundle.js":[function(require,module,exports) {
+"use strict";
+
+require("./css/style.css");
+
+require("./js/script");
+},{"./css/style.css":"css/style.css","./js/script":"js/script.js"}]},{},["bundle.js"], null)
+//# sourceMappingURL=/bundle.js.map
