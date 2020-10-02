@@ -507,11 +507,64 @@ footer#main-footer {
     --footer-height: 100px;
 
     --footer-bg-color: #e0e0e0;
+    --footer-color: rgb(20, 20, 20);
 
     min-height: var(--footer-height);
     height: 100%;
 
     background-color: var(--footer-bg-color);
+}
+
+footer#main-footer .container {
+    padding: 20px;
+}
+
+footer#main-footer .footer-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer#main-footer .footer-items a {
+    color: var(--footer-color);
+    text-decoration: none;
+}
+
+footer#main-footer .footer-items a:hover {
+    text-decoration: underline;
+}
+
+footer#main-footer .footer-items .footer-item {
+    flex: 0 1 0;
+
+    min-width: 200px;
+    text-align: center;
+}
+
+footer#main-footer .footer-items .footer-item h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    font-family: 'Quicksand', var(--default-fonts);
+    font-size: 25px;
+}
+
+footer#main-footer .footer-items .footer-item ul {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+footer#main-footer .footer-items .footer-item li:not(:first-child) {
+    margin-top: 14px;
+}
+
+
+footer#main-footer .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*# sourceMappingURL=/bundle/bundle.css.map */
