@@ -133,7 +133,67 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
 },{"./tags.css":"css/config/vars.css","./utils.css":"css/config/vars.css","./header-nav.css":"css/components/header-nav.css","./footer.css":"css/config/vars.css","./main/init.css":"css/components/main/init.css"}],"css/style.css":[function(require,module,exports) {
 
-},{"./config/init.css":"css/config/init.css","./components/init.css":"css/components/init.css"}],"js/components/helpers.js":[function(require,module,exports) {
+},{"./config/init.css":"css/config/init.css","./components/init.css":"css/components/init.css"}],"js/components/Navbar.js":[function(require,module,exports) {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var htmlClassName = 'js-navbar';
+var mobileButtonClassName = 'js-mobile-button';
+var singleton = null;
+
+var Navbar = /*#__PURE__*/function () {
+  function Navbar(navbar) {
+    var _this = this;
+
+    _classCallCheck(this, Navbar);
+
+    _defineProperty(this, "toggleMenu", function () {
+      _this.navbar.classList.toggle('open');
+    });
+
+    this.navbar = navbar;
+    this.mobileButton = this.navbar.querySelector(".".concat(mobileButtonClassName));
+    if (!this.mobileButton) throw 'Mobile button not found...';
+    this.mobileButton.addEventListener('click', this.toggleMenu);
+  }
+
+  _createClass(Navbar, null, [{
+    key: "getSingleton",
+    value: function getSingleton() {
+      if (!singleton) Navbar._initSingleton();
+      return singleton;
+    }
+  }, {
+    key: "_logError",
+    value: function _logError(message) {
+      console.log("Navbar: ".concat(message));
+    }
+  }, {
+    key: "_initSingleton",
+    value: function _initSingleton() {
+      var navbarElement = document.querySelector(".".concat(htmlClassName));
+      if (!navbarElement) return;
+
+      try {
+        singleton = new Navbar(navbarElement);
+      } catch (err) {
+        Navbar._logError(err);
+      }
+    }
+  }]);
+
+  return Navbar;
+}();
+
+document.addEventListener('DOMContentLoaded', function () {
+  return Navbar.getSingleton();
+});
+},{}],"js/components/helpers.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -345,8 +405,10 @@ document.addEventListener('DOMContentLoaded', function () {
 },{"./helpers":"js/components/helpers.js"}],"js/components/init.js":[function(require,module,exports) {
 "use strict";
 
+require("./Navbar");
+
 require("./MostViewedTags");
-},{"./MostViewedTags":"js/components/MostViewedTags.js"}],"js/script.js":[function(require,module,exports) {
+},{"./Navbar":"js/components/Navbar.js","./MostViewedTags":"js/components/MostViewedTags.js"}],"js/script.js":[function(require,module,exports) {
 "use strict";
 
 var _init = _interopRequireDefault(require("./components/init"));

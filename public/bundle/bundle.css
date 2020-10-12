@@ -480,6 +480,8 @@ nav#main-nav a {
 }
 
 nav#main-nav .container {
+    position: relative;
+
     display: flex;
     justify-content: space-between;
     height: 100%;
@@ -521,7 +523,7 @@ nav#main-nav .mobile-button {
     display: none;
 
     background: url('/bundle/menu-button.9a97d4c2.svg') center no-repeat;
-    background-size: 27px;
+    background-size: 23px;
     width: 70px;
 
     cursor: pointer;
@@ -529,6 +531,35 @@ nav#main-nav .mobile-button {
 
 nav#main-nav.open .mobile-button {
     background-image: url('/bundle/menu-button-close.22be289c.svg');
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    nav#main-nav .nav-options {
+        flex-direction: column;
+        
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: calc(100vh - var(--navbar-height));
+
+        background-color: var(--navbar-bg-color);
+
+        clip-path: circle(0px at 100% calc(-1 * var(--navbar-height)));
+        transition: clip-path 500ms ease-in-out;
+    }
+
+    nav#main-nav.open .nav-options {
+        display: flex;
+
+        clip-path: circle(100%);
+    }
+
+    nav#main-nav .mobile-button {
+        display: block;
+    }
 }
 footer#main-footer {
     --footer-height: 100px;
