@@ -8,4 +8,6 @@ O **Parcel Bundler** foi utilizado para converter os múltiplos arquivos de CSS 
 
 Para instalar o Parcel Bundler, utilize o comando `npm i -g parcel-bundler` (Node.js e NPM são pré-requisitos).
 
+O Node + Express foi utilizado como servidor para organizar as páginas de forma mais fácil. Para instalar o express, utilize o comando `npm i`. Para rodar o servidor, rode `npm start`.
+
 Nenhuma biblioteca ou framework externos foram utilizados nos códigos dos arquivos CSS e JavaScript em si. O bundler foi utilizado apenas para que o projeto pudesse ser separado em múltiplos arquivos de cada tipo de forma a ficar mais organizado.
