@@ -125,9 +125,11 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
 },{"./fonts.css":"css/config/fonts.css","./vars.css":"css/config/vars.css","./functions.css":"css/config/vars.css","./normalize.css":"css/config/vars.css","./normalize-mine.css":"css/config/vars.css"}],"css/components/header-nav.css":[function(require,module,exports) {
 
-},{"./..\\..\\images\\icons\\menu-button.svg":[["menu-button.9a97d4c2.svg","images/icons/menu-button.svg"],"images/icons/menu-button.svg"],"./..\\..\\images\\icons\\menu-button-close.svg":[["menu-button-close.22be289c.svg","images/icons/menu-button-close.svg"],"images/icons/menu-button-close.svg"]}],"css/components/main/init.css":[function(require,module,exports) {
+},{"./..\\..\\images\\icons\\menu-button.svg":[["menu-button.9a97d4c2.svg","images/icons/menu-button.svg"],"images/icons/menu-button.svg"],"./..\\..\\images\\icons\\menu-button-close.svg":[["menu-button-close.22be289c.svg","images/icons/menu-button-close.svg"],"images/icons/menu-button-close.svg"]}],"css/components/main/info-call-to-action.css":[function(require,module,exports) {
 
-},{"./general.css":"css/config/vars.css","./most-viewed-tags.css":"css/config/vars.css"}],"css/components/init.css":[function(require,module,exports) {
+},{"./..\\..\\..\\images\\backgrounds\\call-to-action-services.jpg":[["call-to-action-services.d0bf4fac.jpg","images/backgrounds/call-to-action-services.jpg"],"images/backgrounds/call-to-action-services.jpg"]}],"css/components/main/init.css":[function(require,module,exports) {
+
+},{"./general.css":"css/config/vars.css","./most-viewed-tags.css":"css/config/vars.css","./info-call-to-action.css":"css/components/main/info-call-to-action.css"}],"css/components/init.css":[function(require,module,exports) {
 
 },{"./tags.css":"css/config/vars.css","./utils.css":"css/config/vars.css","./header-nav.css":"css/components/header-nav.css","./footer.css":"css/config/vars.css","./main/init.css":"css/components/main/init.css"}],"css/style.css":[function(require,module,exports) {
 

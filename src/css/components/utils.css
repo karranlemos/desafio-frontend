@@ -9,3 +9,23 @@
     max-width: 1100px;
     margin: 0 auto;
 }
+
+
+
+.btn {
+    text-align: center;
+    display: inline-block;
+    padding: 15px 25px;
+
+    text-decoration: none;
+
+    outline: none;
+    border: none;
+
+    background-color: var(--gray, #e0e0e0);
+    color: var(--black, #141414);
+}
+
+.btn:hover {
+    background-color: var(--dark-gray, #d8d8d8);
+}
