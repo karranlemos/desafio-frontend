@@ -129,13 +129,78 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
 },{"./tags.css":"css/config/vars.css","./utils.css":"css/config/vars.css","./header-nav.css":"css/components/header-nav.css","./footer.css":"css/config/vars.css"}],"css/style.css":[function(require,module,exports) {
 
-},{"./config/init.css":"css/config/init.css","./components/init.css":"css/components/init.css"}],"js/script.js":[function(require,module,exports) {
+},{"./config/init.css":"css/config/init.css","./components/init.css":"css/components/init.css"}],"js/components/helpers.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Helpers = /*#__PURE__*/function () {
+  function Helpers() {
+    _classCallCheck(this, Helpers);
+
+    throw 'Static Only';
+  }
+
+  _createClass(Helpers, null, [{
+    key: "request",
+    value: function request(data) {
+      var callbacks = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+      Helpers._fillRequestParameters(data, callbacks);
+
+      var httpRequest = new XMLHttpRequest();
+      httpRequest.addEventListener('load', function () {
+        callbacks.onStart(httpRequest);
+        if (callbacks.isSuccessful(httpRequest)) callbacks.onSuccess(httpRequest);else callbacks.onFailure(httpRequest);
+        callbacks.onEnd(httpRequest);
+      });
+      if (data.contentType) httpRequest.setRequestHeader('Content-type', data.contentType);
+      httpRequest.open(data.method, data.url);
+      httpRequest.send(data.params);
+    }
+  }, {
+    key: "_fillRequestParameters",
+    value: function _fillRequestParameters(data, callbacks) {
+      if (!data.url) throw 'URL must be provided...';
+      if (!data.method) data.method = 'get';
+      if (!data.params) data.params = '';
+      if (!callbacks.isSuccessful || typeof callbacks.isSuccessful !== 'function') callbacks.isSuccessful = function () {
+        return true;
+      };
+
+      for (var _i = 0, _arr = ['onStart', 'onSuccess', 'onFailure', 'onEnd']; _i < _arr.length; _i++) {
+        var callbackName = _arr[_i];
+        if (!callbacks[callbackName] || typeof callbacks[callbackName] !== 'function') callbacks[callbackName] = function () {};
+      }
+    }
+  }]);
+
+  return Helpers;
+}();
+
+exports.default = Helpers;
+},{}],"js/components/init.js":[function(require,module,exports) {
+"use strict";
+
+var _helpers = _interopRequireDefault(require("./helpers"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./helpers":"js/components/helpers.js"}],"js/script.js":[function(require,module,exports) {
 "use strict";
 
 var _init = _interopRequireDefault(require("./components/init"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./components/init":"css/config/vars.css"}],"bundle.js":[function(require,module,exports) {
+},{"./components/init":"js/components/init.js"}],"bundle.js":[function(require,module,exports) {
 "use strict";
 
 require("./css/style.css");
