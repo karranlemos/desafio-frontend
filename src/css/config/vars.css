@@ -1,9 +1,16 @@
 :root {
+    --black: rgb(20, 20, 20);
+    --gray: #e0e0e0;
+    --dark-gray: #d8d8d8;
+    
     --primary-color: #110f20;
     --secondary-color: #1a3e46;
     --tertiary-color: #739981;
 
+
     --bg-color: #f4f4f4;
+
+    --navbar-bg-color: #e0e0e0;
 
     --system-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     --default-fonts: 'Noto Sans', var(--system-fonts);

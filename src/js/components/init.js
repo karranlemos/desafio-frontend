@@ -1,1 +1,1 @@
-import Helpers from './helpers';
+import './MostViewedTags';

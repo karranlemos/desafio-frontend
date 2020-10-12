@@ -1,17 +1,17 @@
 header#main-header {
-    
-}
-
-nav#main-nav {
     --navbar-height: 80px;
     --navbar-fixed-height: 70px;
     
-    --navbar-bg-color: #e0e0e0;
-    --navbar-bg-color-hover: #d8d8d8;
-    --navbar-color: rgb(20, 20, 20);
+    --navbar-bg-color: var(--gray, #e0e0e0);
+    --navbar-bg-color-hover: var(--dark-gray, #d8d8d8);
+    --navbar-color: var(--black, rgb(20, 20, 20));
 
     --navbar-font-family: 'Quicksand', var(--system-fonts, sans-serif);
 
+    height: var(--navbar-height);
+}
+
+nav#main-nav {
     position: fixed;
 
     height: var(--navbar-height);

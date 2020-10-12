@@ -1,0 +1,30 @@
+.most-viewed-tags-container {
+    text-align: center;
+}
+
+.most-viewed-tags-container .most-viewed-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.most-viewed-tags-container .most-viewed-tags a.tag {
+    font-family: 'Quicksand', var(--default-fonts);
+    font-weight: 600;
+
+    padding: 12px 30px;
+    border-radius: 20px;
+    background-color: var(--gray, #e0e0e0);
+    color: var(--black, rgb(20, 20, 20));
+    text-decoration: none;
+
+    outline: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+.most-viewed-tags-container .most-viewed-tags a.tag:hover {
+    background-color: var(--dark-gray, #d8d8d8);
+}

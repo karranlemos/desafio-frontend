@@ -3,3 +3,5 @@
 
 @import './header-nav.css';
 @import './footer.css';
+
+@import './main/init.css';

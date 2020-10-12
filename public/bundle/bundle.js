@@ -119,15 +119,17 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"css/config/fonts.css":[function(require,module,exports) {
 
-},{"./..\\..\\fonts\\NotoSans\\NotoSans-Regular.ttf":[["NotoSans-Regular.e781d50c.ttf","fonts/NotoSans/NotoSans-Regular.ttf"],"fonts/NotoSans/NotoSans-Regular.ttf"],"./..\\..\\fonts\\NotoSans\\NotoSans-Italic.ttf":[["NotoSans-Italic.dfaa4b17.ttf","fonts/NotoSans/NotoSans-Italic.ttf"],"fonts/NotoSans/NotoSans-Italic.ttf"],"./..\\..\\fonts\\NotoSans\\NotoSans-Bold.ttf":[["NotoSans-Bold.e74c5b45.ttf","fonts/NotoSans/NotoSans-Bold.ttf"],"fonts/NotoSans/NotoSans-Bold.ttf"],"./..\\..\\fonts\\NotoSans\\NotoSans-BoldItalic.ttf":[["NotoSans-BoldItalic.4e13719f.ttf","fonts/NotoSans/NotoSans-BoldItalic.ttf"],"fonts/NotoSans/NotoSans-BoldItalic.ttf"],"./..\\..\\fonts\\Quicksand\\Quicksand-Medium.ttf":[["Quicksand-Medium.b41c759c.ttf","fonts/Quicksand/Quicksand-Medium.ttf"],"fonts/Quicksand/Quicksand-Medium.ttf"],"./..\\..\\fonts\\Quicksand\\Quicksand-Bold.ttf":[["Quicksand-Bold.b48bd0f5.ttf","fonts/Quicksand/Quicksand-Bold.ttf"],"fonts/Quicksand/Quicksand-Bold.ttf"]}],"css/config/vars.css":[function(require,module,exports) {
+},{"./..\\..\\fonts\\NotoSans\\NotoSans-Regular.ttf":[["NotoSans-Regular.e781d50c.ttf","fonts/NotoSans/NotoSans-Regular.ttf"],"fonts/NotoSans/NotoSans-Regular.ttf"],"./..\\..\\fonts\\NotoSans\\NotoSans-Italic.ttf":[["NotoSans-Italic.dfaa4b17.ttf","fonts/NotoSans/NotoSans-Italic.ttf"],"fonts/NotoSans/NotoSans-Italic.ttf"],"./..\\..\\fonts\\NotoSans\\NotoSans-Bold.ttf":[["NotoSans-Bold.e74c5b45.ttf","fonts/NotoSans/NotoSans-Bold.ttf"],"fonts/NotoSans/NotoSans-Bold.ttf"],"./..\\..\\fonts\\NotoSans\\NotoSans-BoldItalic.ttf":[["NotoSans-BoldItalic.4e13719f.ttf","fonts/NotoSans/NotoSans-BoldItalic.ttf"],"fonts/NotoSans/NotoSans-BoldItalic.ttf"],"./..\\..\\fonts\\Quicksand\\Quicksand-SemiBold.ttf":[["Quicksand-SemiBold.37ab67df.ttf","fonts/Quicksand/Quicksand-SemiBold.ttf"],"fonts/Quicksand/Quicksand-SemiBold.ttf"],"./..\\..\\fonts\\Quicksand\\Quicksand-Bold.ttf":[["Quicksand-Bold.b48bd0f5.ttf","fonts/Quicksand/Quicksand-Bold.ttf"],"fonts/Quicksand/Quicksand-Bold.ttf"]}],"css/config/vars.css":[function(require,module,exports) {
 
 },{}],"css/config/init.css":[function(require,module,exports) {
 
 },{"./fonts.css":"css/config/fonts.css","./vars.css":"css/config/vars.css","./functions.css":"css/config/vars.css","./normalize.css":"css/config/vars.css","./normalize-mine.css":"css/config/vars.css"}],"css/components/header-nav.css":[function(require,module,exports) {
 
-},{"./..\\..\\images\\icons\\menu-button.svg":[["menu-button.9a97d4c2.svg","images/icons/menu-button.svg"],"images/icons/menu-button.svg"],"./..\\..\\images\\icons\\menu-button-close.svg":[["menu-button-close.22be289c.svg","images/icons/menu-button-close.svg"],"images/icons/menu-button-close.svg"]}],"css/components/init.css":[function(require,module,exports) {
+},{"./..\\..\\images\\icons\\menu-button.svg":[["menu-button.9a97d4c2.svg","images/icons/menu-button.svg"],"images/icons/menu-button.svg"],"./..\\..\\images\\icons\\menu-button-close.svg":[["menu-button-close.22be289c.svg","images/icons/menu-button-close.svg"],"images/icons/menu-button-close.svg"]}],"css/components/main/init.css":[function(require,module,exports) {
 
-},{"./tags.css":"css/config/vars.css","./utils.css":"css/config/vars.css","./header-nav.css":"css/components/header-nav.css","./footer.css":"css/config/vars.css"}],"css/style.css":[function(require,module,exports) {
+},{"./general.css":"css/config/vars.css","./most-viewed-tags.css":"css/config/vars.css"}],"css/components/init.css":[function(require,module,exports) {
+
+},{"./tags.css":"css/config/vars.css","./utils.css":"css/config/vars.css","./header-nav.css":"css/components/header-nav.css","./footer.css":"css/config/vars.css","./main/init.css":"css/components/main/init.css"}],"css/style.css":[function(require,module,exports) {
 
 },{"./config/init.css":"css/config/init.css","./components/init.css":"css/components/init.css"}],"js/components/helpers.js":[function(require,module,exports) {
 "use strict";
@@ -188,13 +190,161 @@ var Helpers = /*#__PURE__*/function () {
 }();
 
 exports.default = Helpers;
-},{}],"js/components/init.js":[function(require,module,exports) {
+},{}],"js/components/MostViewedTags.js":[function(require,module,exports) {
 "use strict";
 
 var _helpers = _interopRequireDefault(require("./helpers"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./helpers":"js/components/helpers.js"}],"js/script.js":[function(require,module,exports) {
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var htmlClassName = 'js-most-viewed-tags';
+var url = 'https://labs.inforcedata.com.br/desafio-frontend/cloudtags.json';
+
+var MostViewedTags = /*#__PURE__*/function () {
+  function MostViewedTags(mostViewedTagsDiv) {
+    var _this = this;
+
+    _classCallCheck(this, MostViewedTags);
+
+    _defineProperty(this, "_isSuccessful", function (httpRequest) {
+      return httpRequest.status === 200;
+    });
+
+    _defineProperty(this, "_onSuccess", function (httpRequest) {
+      try {
+        var json = JSON.parse(httpRequest.responseText);
+      } catch (err) {
+        MostViewedTags.logError('Could not read JSON...');
+
+        _this._insertMessage('Erro ao ler informação...');
+
+        return;
+      }
+
+      var tagsHTML = '';
+
+      var _iterator = _createForOfIteratorHelper(json),
+          _step;
+
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var item = _step.value;
+          tagsHTML += "<a href=\"".concat(item.link, "\" class=\"tag\">").concat(item.tag, "</a>");
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+
+      if (tagsHTML === '') return _this._insertMessage('No tags found...');
+
+      _this._insertContent(tagsHTML);
+    });
+
+    _defineProperty(this, "_onFailure", function () {
+      _this._insertMessage('Não foi possível carregar tags...');
+    });
+
+    _defineProperty(this, "_emptyDiv", function () {
+      while (_this.mostViewedTagsDiv.firstChild) {
+        _this.mostViewedTagsDiv.removeChild(_this.mostViewedTagsDiv.firstChild);
+      }
+    });
+
+    _defineProperty(this, "_insertContent", function (content) {
+      var mustEmpty = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+      if (mustEmpty) _this._emptyDiv();
+
+      _this.mostViewedTagsDiv.insertAdjacentHTML('beforeend', content);
+    });
+
+    _defineProperty(this, "_insertMessage", function (message) {
+      var mustEmpty = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+      var messageHTML = "<div class=\"message\">".concat(message, "</div>");
+
+      _this._insertContent(messageHTML, mustEmpty);
+    });
+
+    _defineProperty(this, "_insertLoadingMessage", function () {
+      var loadingHTML = '<img src="images/icons/loading.gif" alt="Loading...">';
+
+      _this._insertMessage(loadingHTML);
+    });
+
+    this.mostViewedTagsDiv = mostViewedTagsDiv;
+
+    this._insertLoadingMessage();
+
+    _helpers.default.request({
+      url: url,
+      method: 'get'
+    }, {
+      isSuccessful: this._isSuccessful,
+      onSuccess: this._onSuccess,
+      onFailure: this._onFailure
+    });
+  }
+
+  _createClass(MostViewedTags, null, [{
+    key: "logError",
+    value: function logError(message) {
+      console.log("MostViewedTags: ".concat(message));
+    }
+  }, {
+    key: "initAll",
+    value: function initAll() {
+      var mostViewedTagsDivs = document.getElementsByClassName(htmlClassName);
+      var i = 0;
+
+      var _iterator2 = _createForOfIteratorHelper(mostViewedTagsDivs),
+          _step2;
+
+      try {
+        for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+          var mostViewedTagsDiv = _step2.value;
+
+          try {
+            new MostViewedTags(mostViewedTagsDiv);
+          } catch (err) {
+            MostViewedTags.logError("#".concat(i, ": ").concat(err));
+          }
+
+          i++;
+        }
+      } catch (err) {
+        _iterator2.e(err);
+      } finally {
+        _iterator2.f();
+      }
+    }
+  }]);
+
+  return MostViewedTags;
+}();
+
+document.addEventListener('DOMContentLoaded', function () {
+  return MostViewedTags.initAll();
+});
+},{"./helpers":"js/components/helpers.js"}],"js/components/init.js":[function(require,module,exports) {
+"use strict";
+
+require("./MostViewedTags");
+},{"./MostViewedTags":"js/components/MostViewedTags.js"}],"js/script.js":[function(require,module,exports) {
 "use strict";
 
 var _init = _interopRequireDefault(require("./components/init"));

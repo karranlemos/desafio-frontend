@@ -26,8 +26,8 @@
 
 @font-face {
     font-family: 'Quicksand';
-    font-weight: 500;
-    src: url('/bundle/Quicksand-Medium.b41c759c.ttf');
+    font-weight: 600;
+    src: url('/bundle/Quicksand-SemiBold.37ab67df.ttf');
 }
 @font-face {
     font-family: 'Quicksand';
@@ -35,11 +35,18 @@
     src: url('/bundle/Quicksand-Bold.b48bd0f5.ttf');
 }
 :root {
+    --black: rgb(20, 20, 20);
+    --gray: #e0e0e0;
+    --dark-gray: #d8d8d8;
+    
     --primary-color: #110f20;
     --secondary-color: #1a3e46;
     --tertiary-color: #739981;
 
+
     --bg-color: #f4f4f4;
+
+    --navbar-bg-color: #e0e0e0;
 
     --system-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     --default-fonts: 'Noto Sans', var(--system-fonts);
@@ -420,19 +427,19 @@ body {
     margin: 0 auto;
 }
 header#main-header {
-    
-}
-
-nav#main-nav {
     --navbar-height: 80px;
     --navbar-fixed-height: 70px;
     
-    --navbar-bg-color: #e0e0e0;
-    --navbar-bg-color-hover: #d8d8d8;
-    --navbar-color: rgb(20, 20, 20);
+    --navbar-bg-color: var(--gray, #e0e0e0);
+    --navbar-bg-color-hover: var(--dark-gray, #d8d8d8);
+    --navbar-color: var(--black, rgb(20, 20, 20));
 
     --navbar-font-family: 'Quicksand', var(--system-fonts, sans-serif);
 
+    height: var(--navbar-height);
+}
+
+nav#main-nav {
     position: fixed;
 
     height: var(--navbar-height);
@@ -565,6 +572,42 @@ footer#main-footer .logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+h2.component-title {
+    font-family: 'Quicksand', var(--default-fonts);
+    font-size: 24px;
+
+    margin: 35px 0 25px 0;
+}
+.most-viewed-tags-container {
+    text-align: center;
+}
+
+.most-viewed-tags-container .most-viewed-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.most-viewed-tags-container .most-viewed-tags a.tag {
+    font-family: 'Quicksand', var(--default-fonts);
+    font-weight: 600;
+
+    padding: 12px 30px;
+    border-radius: 20px;
+    background-color: var(--gray, #e0e0e0);
+    color: var(--black, rgb(20, 20, 20));
+    text-decoration: none;
+
+    outline: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+.most-viewed-tags-container .most-viewed-tags a.tag:hover {
+    background-color: var(--dark-gray, #d8d8d8);
 }
 
 /*# sourceMappingURL=/bundle/bundle.css.map */
